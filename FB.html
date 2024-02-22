@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-image: url(./image/bg-img.jpeg);
+            overflow: hidden;
+            color: rgb(45, 0, 0);
+        }
+
+        .main {
+            height: 1000px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: rgba(240, 255, 255, 0.342);
+            height: 450px;
+            width: 250px;
+            border-radius: 12px;
+        }
+
+        .signup {
+            font-weight: 800;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .f_name {
+            font-weight: 100;
+            margin: 0px 0px 0px 20px;
+            font-size: 15px;
+        }
+
+        #name_input1 {
+            height: 20px;
+            margin-left: 30px;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+
+        #name_input2 {
+            height: 20px;
+            margin-left: 30px;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+
+        #name_input3 {
+            height: 20px;
+            margin-left: 30px;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+
+        #name_input4 {
+            height: 20px;
+            margin-left: 30px;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+
+        #name_input5 {
+            height: 20px;
+            margin-left: 30px;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+
+        .lastname {
+            margin-top: 20px;
+        }
+
+        .email {
+            margin-top: 20px;
+        }
+
+        .f_name1 {
+            font-size: 10px;
+            font-weight: 100;
+        }
+
+        .agree {
+            margin-top: 15px;
+            font-size: 10px;
+            justify-content: center;
+        }
+
+        .signup_btn {
+            position: relative;
+            margin-left: 80px;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 12px;
+            border-style: none;
+            background-color: rgb(255, 55, 55);
+            color: white;
+            cursor: pointer;
+            width: 80px;
+        }
+
+        .hr {
+            width: 220px;
+            margin-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .phone {
+            margin-top: 15px;
+        }
+
+
+        .main1 {
+
+            font-family: sans-serif;
+            height: 1000px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            position: relative;
+            left: 35%;
+            top: 380px;
+        }
+
+        .main2 {
+            margin: 20px;
+            background-color: rgba(240, 255, 255, 0.342);
+            height: 250px;
+            width: 450px;
+            border-radius: 12px;
+            position: relative;
+            top: -1000px;
+        }
+
+        .main3 {
+            margin-top: 55px;
+            margin-left: 25px;
+        }
+
+        .after_sup {
+            margin: 50px;
+            margin-top: 25px;
+            font-size: 25px;
+        }
+
+        .goback {
+            position: relative;
+            margin-left: 185px;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 12px;
+            border-style: none;
+            background-color: rgb(255, 55, 55);
+            color: white;
+            cursor: pointer;
+            width: 80px;
+        }
+    </style>
+    <title>Sign up</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <h1 class="signup">Sign up</h1>
+            <hr class="hr">
+            <div class="firstname">
+                <h1 class="f_name">Full Name:</h1>
+                <input type="text" id="name_input1">
+            </div>
+            <div class="lastname">
+                <h1 class="f_name">Last Name:</h1>
+                <input type="text" id="name_input2">
+            </div>
+            <div class="email">
+                <h1 class="f_name">Email:</h1>
+                <input type="email" id="name_input3" placeholder="example@xyz.com">
+            </div>
+            <div class="phone">
+                <h1 class="f_name">Phone no:</h1>
+                <input type="number" id="name_input4" placeholder="+920000000000">
+            </div>
+            <div class="agree">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="name_input5">
+                        </td>
+                        <td>
+                            <spam class="agree">Are you agree with <b>Term and Policy</b></spam>
+                        </td>
+                    </tr>
+                </table>
+                <!-- <h1 class="f_name1"><input type="checkbox" id="name_input5">
+                    <spam class="agree">Are you agree with <b>Term and User</b></spam>
+                </h1> -->
+            </div>
+            <button class="signup_btn" id="btn" onclick="Name()">Sign up</button>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="main2">
+            <!-- <div class="main3"> -->
+            <p id="name" class="after_sup">Your name is: </p>
+            <p id="email" class="after_sup">Your name is: </p>
+            <p id="phone" class="after_sup">Your name is: </p>
+            <!-- </div> -->
+            <button class="goback" onclick="goback()">GO back</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    function Name() {
+        let input1 = document.querySelector("#name_input1").value;
+        let name = document.querySelector("#name");
+        let last_name = document.querySelector("#name_input2").value;
+
+        let email = document.querySelector("#name_input3").value;
+        let email_ = document.querySelector("#email");
+
+        let phone = document.querySelector("#name_input4").value;
+        let phone_ = document.querySelector("#phone");
+
+        let card = document.querySelector(".card");
+        card.style.display = "none";
+
+        let main2 = document.querySelector(".main1");
+        main2.style.display = "block";
+
+
+
+        name.innerHTML = "Your name is: " + input1 + " " + last_name;
+        email_.innerHTML = "Your E-mail is: " + email;
+        phone_.innerHTML = "Your phone number is: " + phone;
+
+    }
+
+    function goback() {
+        let main2 = document.querySelector(".main1");
+        main2.style.display = "none";
+
+        let card = document.querySelector(".card");
+        card.style.display = "block";
+    }
+</script>
+
+</html>
